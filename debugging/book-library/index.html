@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="En">
+<html lang="en">
 
 <head>
   <title>Book Library</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -24,15 +25,20 @@
   <div id="demo" class="collapse">
     <div class="form-group">
       <label for="title">Title:</label>
-      <input class="form-control" id="title" name="title">
-      <label for="author">Author: </label>
-      <input class="form-control" id="author" name="author">
+      <input type="text" class="form-control" id="title" name="title" required>
+
+      <label for="author">Author:</label>
+      <input type="text" class="form-control" id="author" name="author" required>
+
+
       <label for="pages">Pages:</label>
       <input type="number" class="form-control" id="pages" name="pages" required>
+
       <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" id="check" value="">Read
+      <input type="checkbox" class="form-check-input" id="check" value="">Read
       </label>
-      <input type="submit" value="Submit" class="btn btn-primary" onclick="submit();">
+
+      <input type="submit" value="Submit" class="btn btn-primary" onclick="addBook();">
     </div>
   </div>
 
@@ -57,7 +63,7 @@
     </tbody>
   </table>
 
-<script src="script.js" type="module"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
